@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson2_6.client.ViewController">
+    <center>
+        <ListView fx:id="listView" prefHeight="450.0" prefWidth="450.0" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <SplitPane dividerPositions="0.8035714285714286" prefHeight="52.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="20.0" prefWidth="380.0">
+                    <children>
+                        <TextField fx:id="inputField" layoutX="26.0" layoutY="12.0" onAction="#addWordToArea" prefHeight="50.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="63.0">
+                    <children>
+                        <Button layoutY="9.0" mnemonicParsing="false" onAction="#addWordToArea" text="Отправить" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </bottom>
+    <right>
+        <TextArea fx:id="chatHistory" prefHeight="326.0" prefWidth="303.0" BorderPane.alignment="CENTER" />
+    </right>
+</BorderPane>
